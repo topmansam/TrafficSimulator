@@ -5,9 +5,9 @@
 // 0 0 1 1
 package Map_Package;
 public class Map{
-    static int [][] grid;
-    static int rows;
-    static int cols;
+    public static int [][] grid; // We will need to make this public for sure.
+    public static int rows;
+    public static int cols;
 
 // Array is automatically initalized to 0, but we should add the intersections.
 public static void createMap(int rows, int cols){
@@ -19,9 +19,10 @@ public static void createMap(int rows, int cols){
     
     System.out.println("Initialized the map");
 }
-    
-public static void updateMap(){
+// Our map will be udated to 0 or 1. 0 = Available. 1 = Unavailable
+public static void updateMap(int x, int y, int val){
      System.out.println("Updating");
+     Map.grid[x][y]=val; 
 }
 
 //Print current state of the map
